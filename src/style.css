@@ -8,6 +8,7 @@
 .box {
     width: 250px;
     height: 50px;
+    overflow: hidden;
 }
 
 .box::before {
@@ -16,4 +17,14 @@
     content: "";
     display: block;
     background-color: black;
+    animation: slideInOut 0.5s ease-in-out both;
+}
+
+@keyframes slideInOut {
+    0% {
+        transform: translateX(-101%);
+    }
+    100% {
+        transform: translateX(101%);
+    }
 }
